@@ -1,26 +1,18 @@
 import streamlit as st
 
-def FindLargest(num1, num2, num3):
-    if num1 >= num2 and num1 >= num3:
-        return num1
-    elif num2 >= num1 and num2 >= num3:
-        return num2
-    else:
-        return num3
+def find_largest_number(num1, num2, num3):
+    largest = max(num1, num2, num3)
+    return largest
 
 def main():
-    st.title("TDS Graded Assignment Week8 : Find the Largest Among the Three Given Numbers")
+    st.title("Find the Largest Number")
     
-  
-    st.write("Enter three numbers.")
+    num1 = st.number_input("Enter the first number:")
+    num2 = st.number_input("Enter the second number:")
+    num3 = st.number_input("Enter the third number:")
 
-    num1 = st.number_input("Enter the First number:", step=1.0)
-    num2 = st.number_input("Enter the Second number:", step=1.0)
-    num3 = st.number_input("Enter the Third number:", step=1.0)
-
-    if st.button("Find Largest"):
-        largest = FindLargest(num1, num2, num3)
+    if st.button("Find Largest Number"):
+        largest = find_largest_number(num1, num2, num3)
         st.success(f"The largest number is: {largest}")
 
-if _name_ == "_main_":
-    main()
+
