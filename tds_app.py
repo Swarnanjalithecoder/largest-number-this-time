@@ -22,5 +22,5 @@ def main():
         largest = FindLargest(num1, num2, num3)
         st.success(f"The largest number is: {largest}")
 
-if _name_ == "main":
+if _name_ == "_main_":
     main()
